@@ -14,7 +14,7 @@ Contact_List Technology
  ------------------
  * First install [MongoDB](https://www.mongodb.com/download-center)
  
- ######Mac
+ #### Mac
  * For Mac: On command line run `brew install Mongodb` 
  * Make a folder to store the data. Open a command terminal and type the following: `cd / ` then `mkdir data`then `cd data ` then `mkdir db`
  * On your commandline type `mongod`, if that doesn't work try `sudo mongod `, don't close this window or anything else. 
