@@ -1,0 +1,49 @@
+<div ng-controller = "newcontroller">
+	<h2 class="middle">Add New Contact</h2>
+	<div class="row">
+		<div class="six columns">
+		  <form name="contactForm">
+		   <p>First Name: <input class="u-full-width" type="text"  name="first_name" ng-model='contactInfo.first_name' required></p>
+		   <div ng-if="contactForm.first_name.$error.required" ng-show='contactForm.first_name.$touched' class="error">
+		      <p>You forgot to enter contact First Name...</p>
+		    </div>
+		    <!-- Last Name -->
+		   <p>Last Name: <input class="u-full-width" type="text" name="last_name" ng-model='contactInfo.last_name' required></p>
+		   	<div ng-if="contactForm.last_name.$error.required" ng-show='contactForm.last_name.$touched' class="error">
+		      <p>You forgot to enter contact Last Name...</p>
+		    </div>
+		    <!-- Email -->
+		   <p>Email: <input class="u-full-width" type="email" name="email" ng-model='contactInfo.email' required></p>
+		   <div ng-if="contactForm.email.$error.required" ng-show='contactForm.email.$touched' class="error">
+		      <p>You forgot to enter contact Email...</p>
+		    </div>
+		    <!-- Phone Number -->
+		   <p>Phone Number: <input class="u-full-width" type="number" name="phone" ng-minlength="10" 
+             ng-maxlength="10" ng-model='contactInfo.phone' required></p>
+		     <div ng-if="contactForm.phone.$error.required" ng-show='contactForm.phone.$touched' class="error">
+		      <p>You forgot to enter Contact Phone Number...</p>
+		    </div>
+		    <div ng-if="contactForm.phone.$error.minlength" ng-show='contactForm.phone.$touched' class="error">
+		      <p>Phone Number must be 10 digits...</p>
+		    </div>
+		    <div ng-if="contactForm.phone.$error.maxlength" ng-show='contactForm.phone.$touched' class="error">
+		      <p>Phone Number must be only 10 digits...</p>
+		    </div>
+		    <!-- Status -->
+		   <p>Status: <select class="u-full-width" type="text" ng-model="contactInfo.status" required><br><br>
+		   				  <option selected value> Select Status </option>
+		                  <option value="Active"> Active</option>
+		                  <option value="Inactive">Inactive</option>
+		            </select></p>
+		     <div ng-if="contactForm.status.$error.required" ng-show='contactForm.status.$touched' class="error">
+		      <p>You forgot to enter Contact Status...</p>
+		    </div>
+		    <!-- Error messge if Email already exists -->
+		    <h4 class='error'>{{register_message}}</h4>
+		    <input class="button button-primary" type="submit" value="Create" ng-click="createContact()">
+		  </form>
+		  <button class="button button-primary" type="button" ng-click='goBack()'>Go Back</button>
+	  	</div>
+  	</div>
+</div>
+

@@ -1,0 +1,11 @@
+<div ng-controller = "showcontroller">
+	<h2 class="middle">Show Contact</h2>
+  <ul>
+     <li>First Name: {{contactInfo.first_name}}</li>
+    <li>Last Name: {{contactInfo.last_name}}</li>
+    <li>Email: {{contactInfo.email}}</li>
+    <li>Phone Number: {{contactInfo.phone}}</li>
+    <li>Created at: {{contactInfo.createdAt | date: 'short'}}</li>
+  </ul>
+<button class="button button-primary" type="button" ng-click='goBack()'>Go Back</button>
+</div>

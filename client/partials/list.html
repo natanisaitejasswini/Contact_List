@@ -1,0 +1,27 @@
+<div ng-controller = "listcontroller">
+  <h2 class="middle">Contacts List</h2>
+  Search Contacts By First Name: <input type="text" ng-model="filter_name.first_name">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Status</th>
+      <th>Show</th>
+      <th>Update</th>
+      <th>Delete</th>
+    </tr>
+    <tr ng-repeat="contact in contacts | orderBy:'last_name' | filter: filter_name">
+      <td>{{contact.first_name}} {{contact.last_name}}</td>
+      <td>{{contact.email}}</td>
+      <td>{{contact.phone}}</td>
+      <td>{{contact.status}}</td>
+      <td><button ng-click='showContact(contact._id)' type="button">Show</button></td>
+      <td><button ng-click='updateContact(contact._id)' type="button">Edit</button></td>
+      <td><button ng-click='deleteContact(contact._id)' type="button">Delete</button></td>
+    </tr>
+  </table>
+  <button class="button button-primary" type="button" ng-click='newContact()'>Add New Contact</button>
+</div>
+<!-- 
+style="display:none;" -->
