@@ -51,8 +51,5 @@ Contact_List Technology
   
 * Edit Contact
   - Edit contacts and save updated values 
-  
-Contact_List Project Deployed onto  AWS (Running Live)
- ----------------------------------------------------
-  [Contact_List](http://34.223.240.112/#/)
+ 
 
